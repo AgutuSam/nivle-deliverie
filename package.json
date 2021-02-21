@@ -1,11 +1,9 @@
 {
-  "author": "Anuj Shah <anujshah584@gmail.com>",
-  "homepage": "http://AgutuSam.github.io/nivle-delivery",
+  "author": "AgutuSam",
+  "homepage": "http://AgutuSam.github.io/nivle-deliverie",
   "dependencies": {
-    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
-    "classnames": "^2.2.6",
     "composable-middleware": "^0.3.0",
     "concurrently": "^6.0.0",
     "express": "^4.16.4",
@@ -20,13 +18,8 @@
     "nodemon": "^2.0.2",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.2",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0",
+    "react-script": "^2.0.5",
     "validator": "^10.9.0"
   },
   "description": "Full Stack Food Delivery SPA",
@@ -41,7 +34,7 @@
   "name": "food-delivery",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ShahAnuj2610/tomato-food-delivery.git"
+    "url": "https://github.com/AgutuSam/nivle-deliverie"
   },
   "scripts": {
     "client-install": "npm install --prefix client",
@@ -51,8 +44,9 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "mocha --timeout 10000",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build": "react-scripts build",
+    "predeploy": "npm run build --prefix client",
+    "deploy": "gh-pages -d client/build"
   },
   "version": "1.0.0"
 }
